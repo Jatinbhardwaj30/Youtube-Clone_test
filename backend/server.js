@@ -1,19 +1,17 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
-
+const express = require("express");
+const router = require("./Router/router");
 const app = express();
-const PORT = 5000;
+const path = require("path");
+const port = 3000;
+const bodyParser = require("body-parser");
+//server file
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use(cors());
-app.use(express.json());
+app.use(router);
+app.set("view engine", "hbs");
+app.set('views', path.join(__dirname, 'views'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGO_URI, {}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
-
-const videoRoutes = require('./routes/videoRoutes');
-app.use('/api/videos', videoRoutes);
-
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-app.use('/videos', express.static('videos'));
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
