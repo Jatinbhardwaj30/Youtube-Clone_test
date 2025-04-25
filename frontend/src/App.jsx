@@ -14,6 +14,7 @@ function App() {
           <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* video id */}
             <Route path="/video/:id" element={<VideoDetail />} />
           </Routes>
         </div>
