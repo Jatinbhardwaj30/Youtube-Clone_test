@@ -1,0 +1,7 @@
+.home-container {
+    display:flex;
+    gap: 25px;
+    padding: 70px;
+    background-color: #0f0f0f;
+}
+  

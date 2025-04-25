@@ -1,0 +1,90 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f0f0f;
+  padding: 8px 16px;
+  height: 56px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-left,
+.nav-right,
+.nav-center {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .logo {
+  height: 24px;
+  margin-left: 12px;
+}
+
+.icon {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 22px;
+}
+
+.nav-center {
+  flex: 1;
+  max-width: 600px;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+  border: 1px solid #303030;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+.search-btn {
+  background: #222;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-btn img {
+  width: 20px;
+}
+
+.mic-btn {
+  background: #222;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
